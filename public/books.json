@@ -1,9 +1,9 @@
 [
     {
-        "bookId": 1,
+        "id": 1,
         "bookName": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
-        "image": "great_gatsby.jpg",
+        "image": "https://i.ibb.co/Y71mT38/img1.png",
         "review": "A timeless classic exploring the decadence and moral ambiguity of the Jazz Age society.",
         "totalPages": 180,
         "rating": 4.5,
@@ -17,10 +17,10 @@
         "yearOfPublishing": 1925
     },
     {
-        "bookId": 2,
+        "id": 2,
         "bookName": "1984",
         "author": "George Orwell",
-        "image": "1984.jpg",
+        "image": "https://i.ibb.co/x6mLQrD/img2.png",
         "review": "A chilling portrayal of a dystopian future where totalitarianism reigns and individuality is suppressed.",
         "totalPages": 328,
         "rating": 4.8,
@@ -34,10 +34,10 @@
         "yearOfPublishing": 1949
     },
     {
-        "bookId": 3,
+        "id": 3,
         "bookName": "To Kill a Mockingbird",
         "author": "Harper Lee",
-        "image": "to_kill_a_mockingbird.jpg",
+        "image": "https://i.ibb.co/Cbsskxy/img3.png",
         "review": "A profound exploration of racial injustice and moral growth in the American South.",
         "totalPages": 324,
         "rating": 4.7,
@@ -51,10 +51,10 @@
         "yearOfPublishing": 1960
     },
     {
-        "bookId": 4,
+        "id": 4,
         "bookName": "The Catcher in the Rye",
         "author": "J.D. Salinger",
-        "image": "catcher_in_the_rye.jpg",
+        "image": "https://i.ibb.co/Ph3ys3M/img4.png",
         "review": "A poignant narrative following the disillusioned adolescent Holden Caulfield, grappling with alienation and authenticity.",
         "totalPages": 224,
         "rating": 4.4,
@@ -68,10 +68,10 @@
         "yearOfPublishing": 1951
     },
     {
-        "bookId": 5,
+        "id": 5,
         "bookName": "Pride and Prejudice",
         "author": "Jane Austen",
-        "image": "pride_and_prejudice.jpg",
+        "image": "https://i.ibb.co/D7YJN8f/img5.png",
         "review": "A witty and timeless exploration of societal norms, love, and class in Georgian England.",
         "totalPages": 432,
         "rating": 4.6,
@@ -85,10 +85,10 @@
         "yearOfPublishing": 1813
     },
     {
-        "bookId": 6,
+        "id": 6,
         "bookName": "Crime and Punishment",
         "author": "Fyodor Dostoevsky",
-        "image": "crime_and_punishment.jpg",
+        "image": "https://i.ibb.co/ZBgY2j0/img6.png",
         "review": "An intense psychological exploration of guilt, redemption, and the human condition.",
         "totalPages": 576,
         "rating": 4.9,

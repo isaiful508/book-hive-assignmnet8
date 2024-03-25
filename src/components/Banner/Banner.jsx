@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 
 const Banner = () => {
@@ -15,10 +16,11 @@ const Banner = () => {
 
                     <div className="flex mt-5 flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
 
-                        <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-white font-semibold rounded bg-[#23BE0A] dark:text-gray-50">View The List</a>
-
-                       
+                        <NavLink to='/listed-books'
+                         className="px-8 py-3 text-white font-semibold rounded bg-[#23BE0A] dark:text-gray-50">
+                            View The List</NavLink>
                     </div>
+                    
                 </div>
 
                 <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
