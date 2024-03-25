@@ -1,0 +1,104 @@
+[
+    {
+        "bookId": 1,
+        "bookName": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "image": "great_gatsby.jpg",
+        "review": "A timeless classic exploring the decadence and moral ambiguity of the Jazz Age society.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Romance",
+            "Drama"
+        ],
+        "publisher": "Charles Scribner's Sons",
+        "yearOfPublishing": 1925
+    },
+    {
+        "bookId": 2,
+        "bookName": "1984",
+        "author": "George Orwell",
+        "image": "1984.jpg",
+        "review": "A chilling portrayal of a dystopian future where totalitarianism reigns and individuality is suppressed.",
+        "totalPages": 328,
+        "rating": 4.8,
+        "category": "Science Fiction",
+        "tags": [
+            "Dystopian",
+            "Political",
+            "Social Commentary"
+        ],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+    },
+    {
+        "bookId": 3,
+        "bookName": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "image": "to_kill_a_mockingbird.jpg",
+        "review": "A profound exploration of racial injustice and moral growth in the American South.",
+        "totalPages": 324,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Legal Drama",
+            "Coming-of-Age"
+        ],
+        "publisher": "J. B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+    },
+    {
+        "bookId": 4,
+        "bookName": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "image": "catcher_in_the_rye.jpg",
+        "review": "A poignant narrative following the disillusioned adolescent Holden Caulfield, grappling with alienation and authenticity.",
+        "totalPages": 224,
+        "rating": 4.4,
+        "category": "Fiction",
+        "tags": [
+            "Classic",
+            "Coming-of-Age",
+            "Existential"
+        ],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+    },
+    {
+        "bookId": 5,
+        "bookName": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "image": "pride_and_prejudice.jpg",
+        "review": "A witty and timeless exploration of societal norms, love, and class in Georgian England.",
+        "totalPages": 432,
+        "rating": 4.6,
+        "category": "Classic",
+        "tags": [
+            "Romance",
+            "Satire",
+            "Social Commentary"
+        ],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+    },
+    {
+        "bookId": 6,
+        "bookName": "Crime and Punishment",
+        "author": "Fyodor Dostoevsky",
+        "image": "crime_and_punishment.jpg",
+        "review": "An intense psychological exploration of guilt, redemption, and the human condition.",
+        "totalPages": 576,
+        "rating": 4.9,
+        "category": "Fiction",
+        "tags": [
+            "Philosophical",
+            "Psychological",
+            "Russian Literature"
+        ],
+        "publisher": "The Russian Messenger",
+        "yearOfPublishing": 1866
+    }
+]
