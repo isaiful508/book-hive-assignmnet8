@@ -1,5 +1,6 @@
 
 import './App.css'
+import Home from './components/Home/Home'
 
 function App() {
   
@@ -7,7 +8,8 @@ function App() {
   return (
     <>
       
-      <h1>Alhamdulilah</h1>
+      <Home></Home>
+      
       
       
     </>
