@@ -1,5 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const BookDetails = () => {
@@ -10,13 +12,7 @@ const BookDetails = () => {
     const idInt = parseInt(id);
     const bookDetails = bookDetailsData.find((item) => item.id === idInt);
 
-    // console.log(id, bookDetails);
-
-
-
-
-
-
+    
     return (
 
         <div className=" dark:text-gray-800">
