@@ -1,7 +1,8 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { json, useLoaderData, useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { savedToLocalStorage } from "../utility/localstorage";
 
 
 const BookDetails = () => {
@@ -11,6 +12,10 @@ const BookDetails = () => {
 
     const idInt = parseInt(id);
     const bookDetails = bookDetailsData.find((item) => item.id === idInt);
+
+    const handleReadBtn =() => {
+        savedToLocalStorage(bookDetails)
+    }
 
     
     return (
@@ -50,7 +55,7 @@ const BookDetails = () => {
                     <div className="flex flex-col mt-4 space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
 
 
-                    <button className="btn btn-outline">Read</button>
+                    <button onClick={handleReadBtn} className="btn btn-outline">Read</button>
 
                     <button className="btn text-white btn-success bg-[#50B1C9]">Wishlist</button>
 
