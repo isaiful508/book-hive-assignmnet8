@@ -19,9 +19,9 @@ const ListedBooks = () => {
                 <summary className="m-1 btn text-white work-sans-600 bg-[#23BE0A]">Sort By <IoIosArrowDown></IoIosArrowDown> </summary>
                 <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52">
 
-                    <li><a>Item 1</a></li>
-                    <li><a>Item 2</a></li>
-                    <li><a>Item 2</a></li>
+                    <li><a>Rating</a></li>
+                    <li><a>Number Of Pages</a></li>
+                    <li><a>Published Year</a></li>
                 </ul>
             </details>
             </div>

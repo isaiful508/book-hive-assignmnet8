@@ -1,27 +1,59 @@
-import { json, useLoaderData, useParams } from "react-router-dom";
+import {  useLoaderData, useParams } from "react-router-dom";
 import PropTypes from 'prop-types';
-import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
-import { savedToLocalStorage } from "../utility/localstorage";
+import { getItem, saveItem  } from "../utility/localstorage";
+
 
 
 const BookDetails = () => {
     const bookDetailsData = useLoaderData();
 
-    const { id, bookName, image, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = useParams();
+    const { id, 
+        bookName, 
+        image, 
+        author, 
+        category, 
+        review, 
+        tags, 
+        totalPages, 
+        publisher, 
+        yearOfPublishing, 
+        rating } = useParams();
 
     const idInt = parseInt(id);
     const bookDetails = bookDetailsData.find((item) => item.id === idInt);
 
-    //handle read btn
-    const handleReadBtn =() => {
-        savedToLocalStorage(bookDetails)
-    }
-    //handle wishlist btn
+    
 
-    const handleWishListBtn= () =>{
-        savedToLocalStorage(bookDetails);
+    
+  const addToReadList = () => {
+    saveItem('readed', bookDetails);
+
+    console.log(getItem("readed"))
+  };
+
+
+  const addToWishList = () => {
+    let item = getItem("readed")
+
+    let exist = item.find((b)=>{
+      return b.id == bookDetails.id
+    })
+    if(exist){
+      return alert("already readed")
+    }else{
+      saveItem("wishes", bookDetails)
     }
+  };
+
+
+
+
+
+
+
+
 
     
     return (
@@ -61,9 +93,9 @@ const BookDetails = () => {
                     <div className="flex flex-col mt-4 space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
 
 
-                    <button onClick={handleReadBtn} className="btn btn-outline">Read</button>
+                    <button onClick={addToReadList} className="btn btn-outline">Read</button>
 
-                    <button onClick={handleWishListBtn} 
+                    <button onClick={addToWishList} 
                     className="btn text-white btn-success bg-[#50B1C9]">Wishlist</button>
 
                         

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import { getBookFromLocalStorage } from "../utility/localstorage";
+
+import { getItem } from "../utility/localstorage";
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdContacts } from "react-icons/io";
 import { TbBrandPagekit } from "react-icons/tb";
@@ -8,14 +8,14 @@ import { TbBrandPagekit } from "react-icons/tb";
 
 const ReadBooks = () => {
 
-    const readBooks = useLoaderData();
+    // const readBooks = useLoaderData();
 
     const [readBook, setReadBook] = useState([]);
 
     // console.log(readBook);
 
     useEffect(() => {
-        const book = getBookFromLocalStorage()
+        const book = getItem('readed');
         setReadBook(book);
 
     }, []);

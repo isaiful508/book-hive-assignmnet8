@@ -1,23 +1,43 @@
 
-//saved to local storage
- export   const savedToLocalStorage = (bookDetails) => {
-    const readBook = JSON.parse(localStorage.getItem('books')) || [];
-    const readBookExist = readBook.find(item => item.id === bookDetails.id);
-    if (readBookExist) {
-        alert('already added.....')
-    } else {
-        readBook.push(bookDetails);
 
-        localStorage.setItem('books', JSON.stringify(readBook));
-        alert('data added successfully')
 
+export const getItem = (key) => {
+    let items = [];
+    const storedItem = localStorage.getItem(key);
+  
+    if (storedItem) {
+      items = JSON.parse(storedItem);
     }
-}
+  
+    return items;
+  };
+  
+  
+  export const saveItem = (key, item) => {
+      let items = getItem(key); 
+      
+      if (!items) {
+        items = [];
+      }
+  
+    //   console.log(items)
+    //   console.log(item)
+      
+      const isExist = items.find((b) => {
+          console.log(item.id)
+          console.log(b)
+         return b.id === item.id
+      });
+    
+      if (isExist) {
+        return alert("Already added");
+      } else{
+          
+      const updatedItems = [...items, item];
+      
+      localStorage.setItem(key, JSON.stringify(updatedItems));
+      
+      alert("Successfully added");
+      }
+    };
 
-
-//get book from local storage
-
-export const  getBookFromLocalStorage = () =>{
-    const bookFromLocalStorage = JSON.parse(localStorage.getItem('books')) || [];
-    return bookFromLocalStorage;
-}

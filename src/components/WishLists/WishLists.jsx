@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getBookFromLocalStorage } from "../utility/localstorage";
+
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdContacts } from "react-icons/io";
 import { TbBrandPagekit } from "react-icons/tb";
+import { getItem } from './../utility/localstorage';
 
 const WishLists = () => {
 
@@ -12,7 +13,7 @@ const WishLists = () => {
     // console.log(readBook);
 
     useEffect(() => {
-        const book = getBookFromLocalStorage()
+        const book = getItem('wishes');
         setReadBook(book);
 
     }, []);
@@ -20,7 +21,7 @@ const WishLists = () => {
 
     return (
         <div>
-            <h1>Wish list</h1>
+          
             {
                 readBook.map((book) => 
                 
