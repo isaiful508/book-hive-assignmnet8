@@ -31,7 +31,12 @@ const router =createBrowserRouter([
       {
         path:'book-details/:id',
         element:<BookDetails></BookDetails>,
-        loader:({params}) => fetch(`/books.json/${params.id}`),
+        loader:({params}) => fetch(`/books.json?id=${params.id}`).then(res =>{
+          if(!res.ok){
+            throw new Error('Faild to load fetch book details');
+          }
+          return res.json();
+        }),
       }
     ]
 

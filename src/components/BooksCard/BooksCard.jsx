@@ -12,7 +12,7 @@ const BooksCard = () => {
         .then(res => res.json())
         .then(data => setBooksCard(data))
     }, []);
-    console.log(booksCard);
+    // console.log(booksCard);
 
     return (
         <div className="mt-12">
