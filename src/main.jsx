@@ -9,12 +9,14 @@ import ListedBooks from './components/ListedBooks/ListedBooks'
 import PagesToRead from './components/PagesToRead/PagesToRead'
 import MainLayouts from './components/MainLayouts/MainLayouts'
 import BookDetails from './components/BookDetails/BookDetails'
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 
 const router =createBrowserRouter([
   {
     path:'/',
     element:<MainLayouts></MainLayouts>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
