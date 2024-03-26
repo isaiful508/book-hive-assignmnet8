@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const BookDetails = () => {
@@ -67,6 +68,29 @@ const BookDetails = () => {
 
 
     );
+};
+
+
+
+
+
+
+//propstypes validation
+
+BookDetails.propTypes = {
+    bookDetails: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        bookName: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        review: PropTypes.string.isRequired,
+        tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+        totalPages: PropTypes.number.isRequired,
+        publisher: PropTypes.string.isRequired,
+        yearOfPublishing: PropTypes.number.isRequired,
+        rating: PropTypes.number.isRequired,
+    }),
 };
 
 export default BookDetails;
