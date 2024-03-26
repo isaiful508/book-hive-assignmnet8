@@ -13,8 +13,14 @@ const BookDetails = () => {
     const idInt = parseInt(id);
     const bookDetails = bookDetailsData.find((item) => item.id === idInt);
 
+    //handle read btn
     const handleReadBtn =() => {
         savedToLocalStorage(bookDetails)
+    }
+    //handle wishlist btn
+
+    const handleWishListBtn= () =>{
+        savedToLocalStorage(bookDetails);
     }
 
     
@@ -57,7 +63,8 @@ const BookDetails = () => {
 
                     <button onClick={handleReadBtn} className="btn btn-outline">Read</button>
 
-                    <button className="btn text-white btn-success bg-[#50B1C9]">Wishlist</button>
+                    <button onClick={handleWishListBtn} 
+                    className="btn text-white btn-success bg-[#50B1C9]">Wishlist</button>
 
                         
 
