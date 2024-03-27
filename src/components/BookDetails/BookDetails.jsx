@@ -30,7 +30,7 @@ const BookDetails = () => {
   const addToReadList = () => {
     saveItem('readed', bookDetails);
 
-    console.log(getItem("readed"))
+    // console.log(getItem("readed"))
   };
 
 
