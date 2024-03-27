@@ -31,14 +31,14 @@ const BookDetails = () => {
 
     
   const addToReadList = () => {
-    saveItem('readed', bookDetails);
+    saveItem('haveRead', bookDetails);
 
-    // console.log(getItem("readed"))
+   
   };
 
 
   const addToWishList = () => {
-    let item = getItem("readed")
+    let item = getItem("haveRead")
 
     let exist = item.find((b)=>{
       return b.id == bookDetails.id
@@ -46,7 +46,7 @@ const BookDetails = () => {
     if(exist){
       return toast.error("Already Added");
     }else{
-      saveItem("wishes", bookDetails);
+      saveItem("wishList", bookDetails);
     }
   };
 
@@ -61,7 +61,7 @@ const BookDetails = () => {
     
     return (
 
-        <div className=" dark:text-gray-800">
+        <div className="text-black">
 
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
 

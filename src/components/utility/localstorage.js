@@ -7,10 +7,10 @@ import toast from 'react-hot-toast';
 
 export const getItem = (key) => {
     let items = [];
-    const storedItem = localStorage.getItem(key);
+    const setStoredBooks = localStorage.getItem(key);
   
-    if (storedItem) {
-      items = JSON.parse(storedItem);
+    if (setStoredBooks) {
+      items = JSON.parse(setStoredBooks);
     }
   
     return items;

@@ -1,28 +1,35 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 
 import { getItem } from "../utility/localstorage";
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdContacts } from "react-icons/io";
 import { TbBrandPagekit } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
+import { MyContext } from "../Context/Context";
 
 
 const ReadBooks = () => {
 
-    const [readBook, setReadBook] = useState([]);
+    const { sortBy } = useContext(MyContext);
+    const books = getItem("haveRead");
 
-    useEffect(() => {
-        const book = getItem('readed');
-        setReadBook(book);
-
-    }, []);
+    const sortedBooks = [...books].sort((a, b) => {
+        if (a[sortBy] > b[sortBy]) {
+            return -1;
+        }
+        if (a[sortBy] < b[sortBy]) {
+            return 1;
+        }
+        return 0;
+    });
+    
 
 
 
     return (
         <div>
             {
-                readBook.map((book) =>
+                sortedBooks.map((book) =>
                     < div key={book.id}
 
                         className="card lg:card-side bg-base-100 shadow-lg">

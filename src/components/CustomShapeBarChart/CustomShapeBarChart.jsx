@@ -25,7 +25,7 @@ const CustomShapeBarChart = ({data}) => {
       return (
        <div className='flex justify-center items-center bg-[#13131308] rounded-xl mt-10'>
          <BarChart
-      width={1170}
+      width={1920}
       height={750}
       data={data}
       margin={{

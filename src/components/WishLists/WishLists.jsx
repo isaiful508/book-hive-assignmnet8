@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdContacts } from "react-icons/io";
 import { TbBrandPagekit } from "react-icons/tb";
 import { getItem } from './../utility/localstorage';
+import { MyContext } from "../Context/Context";
 
 const WishLists = () => {
 
@@ -12,18 +13,31 @@ const WishLists = () => {
 
     // console.log(readBook);
 
-    useEffect(() => {
-        const book = getItem('wishes');
-        setReadBook(book);
+    // useEffect(() => {
+    //     const book = getItem('wishes');
+    //     setReadBook(book);
 
-    }, []);
+    // }, []);
+
+    const { sortBy } = useContext(MyContext);
+    const books = getItem("wishList");
+
+    const sortedBooks = [...books].sort((a, b) => {
+        if (a[sortBy] > b[sortBy]) {
+            return -1;
+        }
+        if (a[sortBy] < b[sortBy]) {
+            return 1;
+        }
+        return 0;
+    });
 
 
     return (
         <div>
           
             {
-                readBook.map((book) => 
+                sortedBooks.map((book) => 
                 
                 < div key={book.id}
 
