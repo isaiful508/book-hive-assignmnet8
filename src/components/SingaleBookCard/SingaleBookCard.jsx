@@ -6,7 +6,7 @@ const SingaleBookCard = ({ card }) => {
 
   
   return (
-    <Link to={`/book-details/${id}`} className="card mt-8 w-96 bg-base-100 border-2 shadow-md">
+    <Link to={`/book-details/${id}`} className="card mt-8 lg:w-96 bg-base-100 border-2 shadow-md">
 
       <figure className="px-10 pt-10">
 

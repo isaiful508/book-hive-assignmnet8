@@ -36,7 +36,7 @@ const WishLists = () => {
                     <h2 className="card-title">{book.bookName}</h2>
                     <p>By: {book.author}</p>
 
-                    <div className="mt-2 flex items-center gap-5"><span className="font-bold">Tags:     </span>
+                    <div className="mt-2 flex flex-col lg:flex-row items-center gap-5"><span className="font-bold">Tags:     </span>
                         <button className="text-[#23BE0A] work-sans-500 rounded-full bg-[#23BE0A0D] p-2">#{book.tags[0]}</button>
                         <button className="text-[#23BE0A] work-sans-500 rounded-full bg-[#23BE0A0D] p-2">#{book.tags[1]}</button>
                         <p className="flex items-center gap-2"> <CiLocationOn></CiLocationOn> Year Of Publishing : {book.yearOfPublishing}</p>

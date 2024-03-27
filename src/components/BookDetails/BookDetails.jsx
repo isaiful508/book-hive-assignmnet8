@@ -70,7 +70,7 @@ const BookDetails = () => {
                 </div>
 
                 <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-                    <h1 className="text-5xl work-sans-700 font-bold leading-none sm:text-4xl">{bookDetails.bookName}
+                    <h1 className="lg:text-5xl text-3xl work-sans-700 font-bold leading-none sm:text-4xl">{bookDetails.bookName}
                     </h1>
 
                     <p className="mt-4 mb-4 text-lg sm:mb-12">
@@ -81,10 +81,10 @@ const BookDetails = () => {
                     <hr />
                     <p className="mt-4"><span className="font-bold">Review:</span> {bookDetails.review} </p>
 
-                    <p className="mt-4 flex items-center gap-10"><span className="font-bold">Tags:     </span> 
+                    <div className="mt-4 flex flex-col lg:flex-row items-center gap-10"><span className="font-bold">Tags:     </span> 
                         <button className="text-[#23BE0A] work-sans-500 rounded-full bg-[#23BE0A0D] p-2">#{bookDetails.tags[0]}</button>
                         <button className="text-[#23BE0A] work-sans-500 rounded-full bg-[#23BE0A0D] p-2">#{bookDetails.tags[1]}</button>
-                    </p>
+                    </div>
                     <hr />
 
                     <p className="mt-4">Number of Pages: <span className="work-sans-600">{bookDetails.totalPages}</span></p>

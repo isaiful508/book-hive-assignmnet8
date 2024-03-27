@@ -20,7 +20,7 @@ const NavBar = () => {
                     <NavLink to="/pages-to-read">Pages to Read</NavLink>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl work-sans-700 font-bold">Book Hive</a>
+                <a className="btn btn-ghost text-2xl lg:text-xl  work-sans-700 font-bold">Book Hive</a>
             </div>
             <div className="navbar-center hidden lg:flex">
 
@@ -38,10 +38,10 @@ const NavBar = () => {
 
             </div>
 
-            <div className="navbar-end space-x-4">
+            <div className="navbar-end  space-x-4">
 
-                <a className="btn bg-[#23BE0A] text-white">Sign In </a>
-                <a className="btn text-white bg-[#59C6D2]">Sign Up</a>
+                <a className="btn hidden lg:flex  bg-[#23BE0A] text-white">Sign In </a>
+                <a className="btn hidden lg:flex  text-white bg-[#59C6D2]">Sign Up</a>
 
             </div>
         </div>

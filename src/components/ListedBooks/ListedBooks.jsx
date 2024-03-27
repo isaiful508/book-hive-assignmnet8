@@ -1,15 +1,81 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { Link, Outlet } from "react-router-dom";
+import { getItem } from "../utility/localstorage";
 
 const ListedBooks = () => {
 
-    const [tabIndex, setTabIndex] = useState(0);
+
+  //   const [tabIndex, setTabIndex] = useState(0);
+  //   const [sortby, setSortBy] =useState(null);
+  //   const [sortedBooks, setSortedBooks] = useState([]);
+
+  //   //get data from localstorage
+  //   useEffect(() => {
+  //     const booksFromLocalStorage = getItem('readed');
+  //     // console.log(booksFromLocalStorage);
+      
+
+  // }, []);
+
+  
+  // //sorted function
+  // const booksSort = (bookProp) => {
+  //   const sorted = [...sortedBooks]; // Use sortedBooks directly
+  //   if(bookProp === "rating"){
+  //     sorted.sort((a,b) => b.rating - a.rating);
+  //   } else if (bookProp === "totalPages"){
+  //     sorted.sort((a,b) => b.totalPages - a.totalPages);
+  //   } else if(bookProp === "yearOfPublishing"){
+  //     sorted.sort((a,b) => b.yearOfPublishing - a.yearOfPublishing);
+  //   }
+  //   setSortedBooks(sorted);
+  //   console.log(sorted);
+  // }  
+
+
+  // //handle sorted book
+  // const handleSortBtn = (bookProp) => {
+  //   setSortBy(bookProp);
+  //   console.log(sortby);
+  //   booksSort(bookProp); // Call booksSort with the bookProp parameter
+  // }
+
+
+  const [tabIndex, setTabIndex] = useState(0);
+  const [sortby, setSortBy] = useState(null);
+  const [sortedBooks, setSortedBooks] = useState(getItem('readed') || []);
+
+  useEffect(() => {
+      const booksFromLocalStorage = getItem('readed');
+      setSortedBooks(booksFromLocalStorage || []);
+  }, []);
+
+  const booksSort = (bookProp) => {
+      const sorted = [...sortedBooks];
+      if (bookProp === "rating") {
+          sorted.sort((a, b) => b.rating - a.rating);
+      } else if (bookProp === "totalPages") {
+          sorted.sort((a, b) => b.totalPages - a.totalPages);
+      } else if (bookProp === "yearOfPublishing") {
+          sorted.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
+      }
+      setSortedBooks(sorted);
+  }
+
+  const handleSortBtn = (bookProp) => {
+      setSortBy(bookProp);
+      booksSort(bookProp);
+  }
+
+
+
+
 
     return (
         <div>
 
-            <button className="btn text-3xl work-sans-700 w-full h-[100px] mt-12">Books</button>
+            <button className="btn text-3xl work-sans-700 w-full lg:h-[100px] mt-12">Books</button>
 
             {/* sort drop down menu */}
             <div className="text-center mt-4">
@@ -19,13 +85,21 @@ const ListedBooks = () => {
                 <summary className="m-1 btn text-white work-sans-600 bg-[#23BE0A]">Sort By <IoIosArrowDown></IoIosArrowDown> </summary>
                 <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-200 rounded-box w-52">
 
-                    <li><a>Rating</a></li>
-                    <li><a>Number Of Pages</a></li>
-                    <li><a>Published Year</a></li>
+                    <li><button onClick={() => handleSortBtn("rating")}>Rating</button></li>
+
+                    <li><button onClick={() => handleSortBtn("totalPages")}>Number Of Pages</button></li>
+
+                    <li><button onClick={() => handleSortBtn("yearOfPublishing")}>Published Year</button></li>
                 </ul>
             </details>
             </div>
             {/* sort dropdown end */}
+
+
+
+
+
+
 
 
             <div className="flex items-center justify-center my-10 w-full  overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap  text-gray-800">
@@ -34,7 +108,7 @@ const ListedBooks = () => {
           onClick={() => setTabIndex(0)}
           rel="noopener noreferrer"
           href="#"
-          className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${
+          className={`flex items-center flex-shrink-0 px-4 py-3 space-x-2 ${
             tabIndex === 0 ? "border border-b-0" : "border-b"
           } rounded-t-lg border-gray-600 text-gray-900`}
         >
