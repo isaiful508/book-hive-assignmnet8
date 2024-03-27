@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import 'react-toastify/dist/ReactToastify.css';
 import { getItem, saveItem  } from "../utility/localstorage";
 
+import toast from 'react-hot-toast';
+
+
 
 
 const BookDetails = () => {
@@ -41,9 +44,9 @@ const BookDetails = () => {
       return b.id == bookDetails.id
     })
     if(exist){
-      return alert("already readed")
+      return toast.error("Already Added");
     }else{
-      saveItem("wishes", bookDetails)
+      saveItem("wishes", bookDetails);
     }
   };
 

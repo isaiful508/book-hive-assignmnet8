@@ -20,7 +20,7 @@ const BooksCard = () => {
                 <h1 className="text-4xl work-sans-700 text-center">Books</h1>
             </div>
 
-          <div className="grid gap-5 grid-cols-3">
+          <div className="grid gap-5 lg:grid-cols-3">
 
           {
                 booksCard.map(card => <SingaleBookCard card={card} key={card.id}></SingaleBookCard>)

@@ -4,15 +4,12 @@ import { getItem } from "../utility/localstorage";
 import { CiLocationOn } from "react-icons/ci";
 import { IoMdContacts } from "react-icons/io";
 import { TbBrandPagekit } from "react-icons/tb";
+import { NavLink } from "react-router-dom";
 
 
 const ReadBooks = () => {
 
-    // const readBooks = useLoaderData();
-
     const [readBook, setReadBook] = useState([]);
-
-    // console.log(readBook);
 
     useEffect(() => {
         const book = getItem('readed');
@@ -57,7 +54,7 @@ const ReadBooks = () => {
 
                                 <button className="btn bg-[#FFAC3326] text-[#FFAC33] rounded-full">Rating: {book.rating}</button>
 
-                                <button className="btn text-white bg-[#23BE0A] rounded-full">View Details</button>
+                                <NavLink to={`/book-details/${book.id}`} className="btn text-white bg-[#23BE0A] rounded-full">View Details</NavLink>
 
                             </div>
                         </div>

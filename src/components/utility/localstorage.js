@@ -1,4 +1,8 @@
 
+import toast from 'react-hot-toast';
+
+
+
 
 
 export const getItem = (key) => {
@@ -20,24 +24,20 @@ export const getItem = (key) => {
         items = [];
       }
   
-    //   console.log(items)
-    //   console.log(item)
       
       const isExist = items.find((b) => {
-          console.log(item.id)
-          console.log(b)
-         return b.id === item.id
+          return b.id === item.id
       });
     
       if (isExist) {
-        return alert("Already added");
+        return toast.error("Already Exist");
       } else{
           
       const updatedItems = [...items, item];
       
       localStorage.setItem(key, JSON.stringify(updatedItems));
       
-      alert("Successfully added");
+      toast.success('Successfully Added!');
       }
     };
 
