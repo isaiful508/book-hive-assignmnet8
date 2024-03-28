@@ -19,7 +19,7 @@ const NavBar = () => {
                     <NavLink to="/listed-books">Listed Books</NavLink>
                     <NavLink to="/pages-to-read">Pages to Read</NavLink>
                     <NavLink to='/pages-to-wish'>Pages To Wish</NavLink>
-                    <NavLink to="">Contact Us</NavLink>
+                    <NavLink to='/contact'>Contact Us</NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-2xl lg:text-xl  work-sans-700 font-bold">Book Hive</a>
