@@ -18,6 +18,8 @@ const NavBar = () => {
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/listed-books">Listed Books</NavLink>
                     <NavLink to="/pages-to-read">Pages to Read</NavLink>
+                    <NavLink to="/">About Us</NavLink>
+                    <NavLink to="">Contact Us</NavLink>
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-2xl lg:text-xl  work-sans-700 font-bold">Book Hive</a>
@@ -34,6 +36,10 @@ const NavBar = () => {
 
                     <NavLink to='/pages-to-read'
                      className={({isActive})=> isActive? 'text-[#23BE0A] font-bold rounded-lg border-2 p-2 border-[#23BE0A]' : 'font-medium'}>Pages to Read</NavLink>
+                    <NavLink to='/pages-to-wish'
+                     className={({isActive})=> isActive? 'text-[#23BE0A] font-bold rounded-lg border-2 p-2 border-[#23BE0A]' : 'font-medium'}>Pages To Wish</NavLink>
+                    <NavLink to='/contact'
+                     className={({isActive})=> isActive? 'text-[#23BE0A] font-bold rounded-lg border-2 p-2 border-[#23BE0A]' : 'font-medium'}>Contact Us</NavLink>
                 </ul>
 
             </div>

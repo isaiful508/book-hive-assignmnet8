@@ -8,6 +8,9 @@ import BookDetails from "../components/BookDetails/BookDetails";
 import ReadBooks from "../components/ReadBooks/ReadBooks";
 import WishLists from "../components/WishLists/WishLists";
 
+import ContactUs from "../components/ContactUs/ContactUs";
+import PagesToWish from "../components/PagesToWish/PagesToWish";
+
 
 export const router =createBrowserRouter([
     {
@@ -46,7 +49,16 @@ export const router =createBrowserRouter([
             }
             return res.json();
           }),
-        }
+        },
+
+        {
+          path:'/pages-to-wish',
+          element:<PagesToWish></PagesToWish>
+        },
+        {
+          path:'/contact',
+          element:<ContactUs></ContactUs>
+        },
       ]
   
     },

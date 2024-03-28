@@ -9,9 +9,9 @@ const PagesToRead = () => {
     const [reads, setReads] = useState([]);
     // console.log(reads);
     useEffect(() => {
-        const readLists = getItem('readed');
+        const readLists = getItem('haveRead');
         setReads(readLists);
-    },[])
+    },[]);
 
     return (
         <div >
