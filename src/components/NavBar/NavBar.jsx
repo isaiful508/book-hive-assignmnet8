@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className="navbar bg-base-100">
+        <NavLink to="/" className="navbar bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
 
@@ -50,7 +50,7 @@ const NavBar = () => {
                 <a className="btn hidden lg:flex  text-white bg-[#59C6D2]">Sign Up</a>
 
             </div>
-        </div>
+        </NavLink>
     );
 };
 
