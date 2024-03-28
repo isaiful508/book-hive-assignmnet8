@@ -1,9 +1,9 @@
-#Book Hive
+# Book Hive
 
 ## Overview
 Book Hive is an online platform dedicated to book enthusiasts, providing a curated collection of books across various genres. Whether you're an avid reader or just starting your reading journey, Book Hive has something for everyone.
 
-Live Site(surge): [Book Hive](http://honorable-sidewalk.surge.sh/)
+Live Site(surge): [Book Hive](http://honorable-sidewalk.surge.sh/).
 Live Site(netlify): [Book Hive](http://honorable-sidewalk.surge.sh/)
 
 
